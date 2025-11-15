@@ -67,6 +67,10 @@ vector2d.prototype.toString = function() {
     return(`x: ${x_}, y: ${y_}, mag: ${m}, angle: ${a}`);
 }
 
+vector2d.prototype.toDeg = function(rad) {
+    return(((rad*180)/Math.PI).toFixed(2));
+}
+
 
 ////////////////////////////// CLASS FUNCTIONS ////////////////////////
 

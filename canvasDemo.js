@@ -80,6 +80,10 @@ function checkBallBounces () {
   //   }
   // }
 
+// Solve elastic collisions in 2 dimensions
+// See Khan Academy "NCERT physics class 11 Unit 6 Lesson 9"
+// https://www.khanacademy.org/science/in-in-class11th-physics/in-in-class11th-physics-work-energy-and-power/in-in-class11th-physics-work-energy-and-power-elastic-and-inelastic-collisions/v/elastic-and-inelastic-collisions
+
   for(var i = 0; i < balls.length ; i++){
     for(var j = i + 1; j < balls.length; j++){
 
@@ -143,7 +147,8 @@ function checkBallBounces () {
         // console.log(vel_b1_not_cm.magnitude(), vel_b1_not_cm_mag);
 
         // Now repeat for the second ball
-        var vel_b2_cm = vector2d.subtract(vec_cm, b2.loc);
+        // var vel_b2_cm = vector2d.subtract(vec_cm, b2.loc);
+        var vel_b2_cm = vector2d.copy(vel_b1_cm); // on the same line as vel_b1_cm
         vel_b2_cm.setMag(b2.vel.magnitude() * Math.cos(vector2d.angleBetween(b2.vel,vel_b2_cm)));
         var vel_b2_not_cm = vector2d.subtract(b2.vel,vel_b2_cm);
 
