@@ -14,6 +14,8 @@ David SantoPietro in the Khan class derives a short cut which is that the sum of
 
 An easier and cleaner method uses the center of mass of the two bodies. In the center of mass frame of reference, the velocity of the COM is zero and the initial velocities of the two bodies are adjusted by subtracting the true velocity of the COM.  Then the final velocities of the two bodies in the COM frame of reference are just the negatives or reflections of their initial velocities in the COM frame of reference.  Finally the velocity of the COM is added back to those velocities to arrive at the velocities in the "lab"  frame of reference.
 
+https://www.youtube.com/watch?v=P9cvU6HPZ8c&t=101s
+
 Then there is a short cut derived from that method which finds the final velocities by subtracting the initial velocities from twice the velocity of the COM.
 
 ##### v_f = 2 * v_com - v_i
@@ -40,10 +42,12 @@ v_f = 2 * v_com - v_i
 
 #### 2 dimensions
 
-The short cut formula for finding the final velocity is scalar not vector.  In other words, one dimension.  But the collisions are in two dimensions.  
+The short cut formula for finding the final velocity is one dimensional.  But the collisions are in two dimensions.  
 
 One might think that two calculations need to be made -- one in the x direction and another in the y direction.
 
 But what if we make the x axis be the line connecting the centers of the two bodies.  Then the components of the velocities that lie on that line are 100% involved in the collision and the components of the velocities that are perpendicular to that line are 0% involved in the collision.
 
-The components of the velocities that are perpendicular still represent momentum that must be conserved.  To conserve those components of the initial momentum, simply add those components to the final velocities as the last step.
+The velocity of each body in the collision makes an angle with the collision axis.  So we just need to divide that velocity into two components.  The component lying on the collision axis is the cosine of the angle and the component perpendicular is the sine of the angle.
+
+The components of the velocities that are perpendicular still represent momentum that must be conserved.  To conserve those components of the initial velocities, simply add those components back to the final velocities as the last step.
